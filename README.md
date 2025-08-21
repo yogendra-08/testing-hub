@@ -108,6 +108,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-<div align="center">
-  Made with ❤️ by Your Name
+<div align="left">
+  ---
+
+© 2025 Yogendra Bhange & Prathmesh Saharkar.  
+Project developed by us.  
+[View Repository](https://github.com/yogendra-08/testing-hub)
 </div>
