@@ -7,6 +7,20 @@ A modern web application built with Next.js and Firebase, designed to provide a 
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
 
+## 📸 Screenshots
+
+### Homepage Banner
+![Home Page](./snapshots/home-page.png)
+> Homepage banner of the IT and AIML Department Hub featuring an illustrated building labeled IT and AIML Department alongside a welcome message and call-to-action buttons for Learn More and Explore Academics.
+
+### Department Navigation & News
+![Highlights](./snapshots/highlight-page.png)
+> Homepage section of the IT and AIML Department Hub showing department navigation cards (About Us, Academics, Faculty, Gallery, Students, Contact Us) followed by a Latest News & Past Highlights section featuring Annual Tech Fest 2024, Newsletter 2023, and Industry Visit updates with illustrated banners.
+
+### Disclaimer Popup
+![Disclaimer](./snapshots/disclaimer.png)
+> A disclaimer popup displayed on the IT and AIML Department Hub website, notifying users that the content is for demo purposes only and has no official connection with the real institute.
+
 ## ✨ Features
 
 - **Modern Stack**: Built with Next.js 13+ and TypeScript
