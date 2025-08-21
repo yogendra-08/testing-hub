@@ -35,7 +35,7 @@ export default function AboutPage() {
           <CardTitle className="flex items-center gap-2 font-headline"><BookOpen /> Department History</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4 text-muted-foreground">
-          <p>The Department of Information Technology and AIML Department at Government Polytechnic, Nagpur was established in [Year of Establishment] with the objective of imparting quality education in the field of IT and AIML Department. Since its inception, the department has been at the forefront of producing skilled and knowledgeable professionals who have made significant contributions to the industry.</p>
+          <p>The Department of Information Technology and AIML Department at Institute of Technology, Nagpur was established in [Year of Establishment] with the objective of imparting quality education in the field of IT and AIML. Since its inception, the department has been at the forefront of producing skilled and knowledgeable professionals who have made significant contributions to the industry.</p>
           <p>Over the years, we have grown in strength and stature, continuously updating our curriculum and laboratories to keep pace with the rapid advancements in technology. Our alumni are placed in leading companies worldwide, a testament to the quality of education and training they receive.</p>
         </CardContent>
       </Card>

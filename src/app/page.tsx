@@ -1,9 +1,18 @@
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Users, Camera, Briefcase, Phone, Building, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
 
 export default function Home() {
   const quickLinks = [
@@ -19,8 +28,8 @@ export default function Home() {
     {
       title: "Annual Tech Fest 2024",
       description: "A grand success with 300+ participants. Students organized coding, robotics, and quiz competitions, showcasing their technical prowess.",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "tech event",
+      imageUrl: "/img-data/annual-day.png",
+      imageHint: "Annual day event",
       tag: "May 2024",
       link: {
         text: "View Photos",
@@ -30,8 +39,8 @@ export default function Home() {
     {
       title: "Newsletter 2023",
       description: "A special edition where students gifted the newsletter to teachers as a token of respect and appreciation for their guidance.",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "newsletter cover",
+      imageUrl: "/img-data/newsletter.png",
+      imageHint: "Newsletter cover",
       tag: "Past Highlight",
       link: {
         text: "View Newsletter",
@@ -41,8 +50,8 @@ export default function Home() {
     {
       title: "Industry Visit",
       description: "Our final year students visited a leading IT and AIML Department firm, gaining insights into corporate work culture and emerging technologies.",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "students industry",
+      imageUrl: "/img-data/visit.png",
+      imageHint: "Industry visit",
       tag: "March 2024",
       link: {
         text: "Read More",
@@ -54,21 +63,23 @@ export default function Home() {
   return (
     <div className="space-y-16">
       <section className="relative h-[60vh] -mt-8 -mx-4 flex items-center justify-center text-center text-white animate-fade-in">
-        <Image 
-          src="https://placehold.co/1600x900.png"
-          alt="Government Polytechnic Nagpur Campus"
-          data-ai-hint="college campus"
-          layout="fill"
-          objectFit="cover"
-          className="z-0"
-        />
+        <div className="relative w-full h-full">
+          <Image 
+            src="/img-data/main-dept.png"
+            alt="Institute of Technology Campus"
+            fill
+            sizes="100vw"
+            className="object-cover z-0"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="z-20 p-4">
           <h1 className="font-headline text-4xl md:text-7xl font-bold tracking-tight drop-shadow-lg">
             Welcome to the IT and AIML Department Hub
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90 drop-shadow-md">
-            Department of Information Technology and AIML Department, Government Polytechnic, Nagpur.
+            Department of Information Technology and AIML, Institute of Technology, Nagpur.
             Your gateway to innovation, learning, and excellence in technology.
           </p>
           <div className="mt-8 flex justify-center gap-4">
@@ -117,9 +128,9 @@ export default function Home() {
                   <Image
                     src={item.imageUrl}
                     alt={item.title}
-                    data-ai-hint={item.imageHint}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
                   />
                 </div>
               )}

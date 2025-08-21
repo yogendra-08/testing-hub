@@ -8,17 +8,28 @@ async function readFile<T>(filename: string): Promise<T> {
   const filePath = path.join(dataPath, filename);
   try {
     const data = await fs.readFile(filePath, 'utf-8');
+    if (!data.trim()) {
+      // Handle empty files
+      throw new Error('File is empty');
+    }
     return JSON.parse(data);
   } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      // File doesn't exist, return default value based on filename
-      if (filename.endsWith('.json') && (filename.includes('faculty') || filename.includes('gallery') || filename.includes('notices') || filename.includes('events') || filename.includes('achievements'))) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT' || 
+        (error as Error).message === 'File is empty' || 
+        error instanceof SyntaxError) {
+      // Return appropriate defaults based on filename
+      if (filename.endsWith('.json') && (filename.includes('faculty') || 
+          filename.includes('gallery') || 
+          filename.includes('notices') || 
+          filename.includes('events') || 
+          filename.includes('achievements'))) {
         return [] as T;
       }
       if (filename === 'contact.json') {
         return { address: '', email: '', phone: '' } as T;
       }
     }
+    console.error(`Error reading file ${filename}:`, error);
     throw error;
   }
 }

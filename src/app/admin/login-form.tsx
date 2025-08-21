@@ -43,7 +43,7 @@ export function LoginForm() {
         <Input
           id="id"
           name="id"
-          placeholder="ITHOD@GPN"
+          placeholder="ITHOD@IOT"
           required
           type="text"
         />

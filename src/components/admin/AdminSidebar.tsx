@@ -53,7 +53,7 @@ const SidebarContent = () => (
     <div className="border-b p-4">
       <Link href="/admin/dashboard" className="flex items-center gap-2 font-semibold font-headline">
         <Code className="h-6 w-6 text-primary" />
-        <span>GPN IT and AIML Department Admin</span>
+        <span>IT and AIML Department Admin</span>
       </Link>
     </div>
     <nav className="flex-1 space-y-2 p-4">

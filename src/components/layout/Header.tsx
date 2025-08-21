@@ -44,8 +44,8 @@ const Header = () => {
           <Link href="/" className="flex items-center gap-2 font-bold font-headline">
             <Code className="h-6 w-6 text-primary" />
             <div className="flex flex-col">
-              <span className="text-lg">GPN IT and AIML Department Hub</span>
-              <span className="text-xs text-muted-foreground -mt-1">Govt. Polytechnic, Nagpur</span>
+              <span className="text-lg">IT and AIML Department Hub</span>
+              <span className="text-xs text-muted-foreground -mt-1">Institute of Technology, Nagpur</span>
             </div>
           </Link>
         </div>
@@ -65,7 +65,7 @@ const Header = () => {
             <SheetContent side="right">
               <Link href="/" className="mr-6 flex items-center space-x-2">
                 <Code className="h-6 w-6 text-primary" />
-                <span className="font-bold inline-block font-headline">GPN IT and AIML Department Hub</span>
+                <span className="font-bold inline-block font-headline">IT and AIML Department Hub</span>
               </Link>
               <div className="flex flex-col gap-4 py-6">
                 {navLinks.map((link) => (

@@ -51,7 +51,7 @@ export default async function ContactPage() {
           style={{ border: 0 }}
           allowFullScreen={false}
           loading="lazy"
-          title="Google Maps Location of Government Polytechnic Nagpur"
+          title="Google Maps Location of Institute of Technology Nagpur"
         ></iframe>
       </div>
     </div>

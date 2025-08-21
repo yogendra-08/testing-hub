@@ -30,9 +30,10 @@ export async function login(prevState: { message: string }, formData: FormData) 
   const adminId = formData.get('id');
   const password = formData.get('password');
 
-  if (adminId === 'ITHOD@GPN' && password === 'ITHOD123') {
-    const sessionData = { isAdmin: true, user: 'ITHOD' };
-    cookies().set(SESSION_COOKIE_NAME, JSON.stringify(sessionData), {
+  if (adminId === 'ITHOD@IOT' && password === 'ITHOD123') {
+    const sessionData = { isAdmin: true, user: 'IOT-ADMIN' };
+    const cookieStore = await cookies();
+    cookieStore.set(SESSION_COOKIE_NAME, JSON.stringify(sessionData), {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       maxAge: 60 * 60 * 24, // 1 day
@@ -45,7 +46,8 @@ export async function login(prevState: { message: string }, formData: FormData) 
 }
 
 export async function logout() {
-  cookies().delete(SESSION_COOKIE_NAME);
+  const cookieStore = await cookies();
+  cookieStore.delete(SESSION_COOKIE_NAME);
   redirect('/admin');
 }
 

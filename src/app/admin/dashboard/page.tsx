@@ -25,7 +25,7 @@ export default async function DashboardPage() {
     <div className="space-y-6">
       <header>
         <h1 className="text-3xl font-bold font-headline">Dashboard</h1>
-        <p className="text-muted-foreground">Welcome to the GPN IT and AIML Department Hub Admin Panel.</p>
+        <p className="text-muted-foreground">Welcome to the IT and AIML Department Hub Admin Panel.</p>
       </header>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">

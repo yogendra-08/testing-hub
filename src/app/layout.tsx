@@ -6,8 +6,8 @@ import DisclaimerModal from '@/components/DisclaimerModal';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'GPN IT and AIML Department Hub',
-  description: 'Official website for the IT and AIML Department of Government Polytechnic, Nagpur.',
+  title: 'IT and AIML Department Hub',
+  description: 'Official website for the IT and AIML Department of Institute of Technology, Nagpur.',
 };
 
 export default function RootLayout({
@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
